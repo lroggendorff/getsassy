@@ -4,6 +4,15 @@
 	box-shadow:$x $y $blur $color;
 }
 
+.deck-container h1 span {
+    font-size: .75em;
+}
+
+#sass-description pre {
+    float: left;
+    margin-right: 20px;
+}
+
 .introduction {
 	.deck-container {
 		width:auto;
@@ -21,30 +30,6 @@
 		}
 	}
 }
-
-.theme-menu {
-	display:none;
-	float:left;
-	color:#888;
-	border-left:1px solid #555;
-	border-right:1px solid #555;
-	line-height:32px;
-	height:32px;
-	font-family:sans-serif;
-	padding-right:15px;
-	margin-left:15px;
-
-	.js & {
-		display:block;
-	}
-
-	label {
-		font-size:12px;
-		vertical-align:baseline;
-		margin:0 4px 0 15px;
-	}
-}
-
 
 @media print {
 	header {

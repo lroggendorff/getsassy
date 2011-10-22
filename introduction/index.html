@@ -27,100 +27,102 @@
 	
 	<!-- Custom CSS just for this page -->
 	<link rel="stylesheet" href="introduction.css">
+	<link rel="stylesheet" href="../css/common.css">
 	
 	<script src="../modernizr.custom.js"></script>
 </head>
 
-<body class="deck-container">
+<body class="introduction">
 
-<section class="slide" id="title-slide">
-	<h1>Let's Get SASSy:</br>
-	  <span>Fast Styling with Compass</span></h1>
-</section>
+<article class="deck-container">
+  <section class="slide" id="title-slide">
+  	<h1>Let's Get SASSy:</br>
+  	  <span>Fast Styling with Compass</span></h1>
+  </section>
 
-<section class="slide" id="sass-description">
-	<h2>What is SASS?</h2>
-	<p><strong>Sass makes CSS fun again.</strong> Sass is an extension of CSS3, adding nested rules, variables, mixins, selector inheritance, and more. It’s translated to well-formatted, standard CSS using the command line tool or a web-framework plugin.</p>
-	<pre><code>/* Variables */
-$blue: #3bbfce;
-$margin: 16px;
+  <section class="slide" id="sass-description">
+  	<h2>What is SASS?</h2>
+  	<p><strong>Sass makes CSS fun again.</strong> Sass is an extension of CSS3, adding nested rules, variables, mixins, selector inheritance, and more. It’s translated to well-formatted, standard CSS using the command line tool or a web-framework plugin.</p>
+  	<pre><code>/* Variables */
+  $blue: #3bbfce;
+  $margin: 16px;
 
-.content-navigation {
-  border-color: $blue;
-  color:
-    darken($blue, 9%);
-}</code></pre>
-  <pre><code>/* Mixins */
-@mixin table-base {
-  th {
-    text-align: center;
-    font-weight: bold;
+  .content-navigation {
+    border-color: $blue;
+    color:
+      darken($blue, 9%);
+  }</code></pre>
+    <pre><code>/* Mixins */
+  @mixin table-base {
+    th {
+      text-align: center;
+      font-weight: bold;
+    }
+    td, th {padding: 2px}
   }
-  td, th {padding: 2px}
-}
 
-#data {
-  @include table-base;
-}</code></pre>
-  <pre><code>/* Nesting */
-li {
-  font: {
-    family: serif;
-    weight: bold;
-    size: 1.2em;
-  }
-}</code></pre>
-</section>
+  #data {
+    @include table-base;
+  }</code></pre>
+    <pre><code>/* Nesting */
+  li {
+    font: {
+      family: serif;
+      weight: bold;
+      size: 1.2em;
+    }
+  }</code></pre>
+  </section>
 
-<section class="slide" id="compass-description">
-	<h2>What is Compass?</h2>
-	<p>Compass is an open-source CSS authoring framework which uses the Sass stylesheet language to make writing stylesheets powerful and easy.</p>
-	<pre><code>/* Compass: */
-.simple { @include border-radius(4px, 4px); }
+  <section class="slide" id="compass-description">
+  	<h2>What is Compass?</h2>
+  	<p>Compass is an open-source CSS authoring framework which uses the Sass stylesheet language to make writing stylesheets powerful and easy.</p>
+  	<pre><code>/* Compass: */
+  .simple { @include border-radius(4px, 4px); }
 
-/* Generated CSS: */
-.simple {
-  -webkit-border-radius: 4px 4px;
-  -moz-border-radius: 4px / 4px;
-  -o-border-radius: 4px / 4px;
-  -ms-border-radius: 4px / 4px;
-  -khtml-border-radius: 4px / 4px;
-  border-radius: 4px / 4px;
-}</code></pre>
-</section>
+  /* Generated CSS: */
+  .simple {
+    -webkit-border-radius: 4px 4px;
+    -moz-border-radius: 4px / 4px;
+    -o-border-radius: 4px / 4px;
+    -ms-border-radius: 4px / 4px;
+    -khtml-border-radius: 4px / 4px;
+    border-radius: 4px / 4px;
+  }</code></pre>
+  </section>
 
-<section class="slide" id="setup">
-	<h2>Install, Play</h2>
-	<p><a href="http://compass-style.org/install/">http://compass-style.org/install/</a></p>
-	<p>Compass runs on any computer that has ruby installed.</p>
-	<pre><code>$ gem install compass
-$ compass create /path/to/project
-$ cd /path/to/project
-$ compass watch</code></pre>
-</section>
+  <section class="slide" id="setup">
+  	<h2>Install, Play</h2>
+  	<p><a href="http://compass-style.org/install/">http://compass-style.org/install/</a></p>
+  	<p>Compass runs on any computer that has ruby installed.</p>
+  	<pre><code>$ gem install compass
+  $ compass create /path/to/project
+  $ cd /path/to/project
+  $ compass watch</code></pre>
+  </section>
+  
 
+	<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+	<a href="#" class="deck-next-link" title="Next">&#8594;</a>
 
-<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
-<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+	<p class="deck-status">
+		<span class="deck-status-current"></span>
+		/
+		<span class="deck-status-total"></span>
+	</p>
 
-<p class="deck-status">
-	<span class="deck-status-current"></span>
-	/
-	<span class="deck-status-total"></span>
-</p>
+	<form action="." method="get" class="goto-form">
+		<label for="goto-slide">Go to slide:</label>
+		<input type="number" name="slidenum" id="goto-slide">
+		<input type="submit" value="Go">
+	</form>
+	
+	<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+</article>
 
-<form action="." method="get" class="goto-form">
-	<label for="goto-slide">Go to slide:</label>
-	<input type="number" name="slidenum" id="goto-slide">
-	<input type="submit" value="Go">
-</form>
-
-<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
-
-
-  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="../jquery-1.6.4.min.js"><\/script>')</script>
+<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../jquery-1.6.4.min.js"><\/script>')</script>
 
 <!-- Deck Core and extensions -->
 <script src="../core/deck.core.js"></script>
